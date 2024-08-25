@@ -12,4 +12,8 @@ app.get('/api', function(req, res) {
     res.json({firstname: 'Shubhangi', lastname: 'Modi'});
 });
 
+app.get('/person/:id', function(req, res) {
+    res.send(`<h1> ${req.params.id} </h1>`);
+});
+
 app.listen(port);
